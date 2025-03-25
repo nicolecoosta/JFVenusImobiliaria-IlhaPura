@@ -585,7 +585,6 @@ text-align: right;
 }
 #faq-section .faq-item.active h3::before {
   height: 100px; 
-  height: 100px;
   top: 50%;
 }
 
@@ -612,6 +611,12 @@ text-align: right;
   }
   #faq-section .image-container {
     display: none;
+  }
+  #faq-section .container h1 {
+    font-size: 24px; 
+  }
+  #faq-section .faq-item.active h3::before {
+    height: 270px; 
   }
 }
 
