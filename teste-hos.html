@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos do Brasil</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  flex: 1;
+  max-width: 40%;
+}
+
+.hero h1 {
+  font-size: 46px;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #191919;
+  font-family: "Abhaya Libre", serif;
+}
+
+.hero h1 span {
+  font-style: italic;
+  color: #C8B25E;
+  font-family: The Nautigal;
+font-weight: 400;
+font-size: 60px;
+line-height: 100%;
+letter-spacing: -2%;
+
+}
+
+.hero p {
+  margin-bottom: 2rem;
+  max-width: 600px;
+  font-family: Lato;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+letter-spacing: 0%;
+color: #000;
+}
+
+.dropdown {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+            position: relative;
+            width: 360px;
+        }
+
+        .dropdown-header {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            justify-content: space-between;
+        }
+
+        .dropdown-header img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .dropdown-header div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dropdown-header strong {
+          color: #8a6f2a;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 0%;
+        }
+
+        .dropdown-header span {
+          font-family: Lato;
+font-weight: 400;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #737373;
+        }
+
+        .dropdown-list {
+            display: none;
+            position: absolute;
+    top: 90px;
+    width: 100%;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    left: 0;
+        }
+
+        .dropdown-list a {
+            display: block;
+            padding: 15px;
+            color: #8a6f2a;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .dropdown-list a:hover {
+            background: #f0f0f0;
+        }
+
+        .dropdown.open .dropdown-list {
+            display: block;
+        }
+        
+
+.dropdown-header i.fa-solid.fa-chevron-down {
+    font-size: 16px; 
+    color: #8a6f2a; 
+    margin-left: 10px; 
+    transition: transform 0.3s; 
+}
+
+/* Quando o dropdown está aberto, você pode rodar a seta */
+.dropdown.open i.fa-solid.fa-chevron-down {
+    transform: rotate(180deg); 
+}
+/*imagens */
+.destinos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  max-width: 55%;
+}
+
+.destino {
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+/* Ajustando tamanhos e posições */
+.destino:nth-child(1) { /* Primeira imagem - grande (esquerda) */
+  grid-column: 1;
+  grid-row: span 2;
+  height: 330px;
+}
+
+.destino:nth-child(2) { /* Segunda imagem - horizontal (direita) */
+  grid-column: 2;
+  grid-row: 1;
+  height: 160px;
+}
+
+.destino:nth-child(3) { /* Terceira imagem - horizontal (esquerda) */
+  grid-column: 1;
+  grid-row: 3;
+  height: 160px;
+}
+
+.destino:nth-child(4) { /* Quarta imagem - vertical (direita) */
+  grid-column: 2;
+  grid-row: span 2;
+  height: 330px;
+}
+
+.destino:hover {
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text {
+    max-width: 100%;
+  }
+
+  .destinos {
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .destino {
+    height: auto;
+  }
+}
+
+
+</style>
+  </head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="text">
+          <h1>OS MELHORES DESTINOS DO BRASIL <span>Estão Aqui</span></h1>
+          <p>
+            Descubra a diversidade incrível do Brasil! Das praias paradisíacas de Fernando de Noronha às florestas exuberantes da Amazônia, cada destino é repleto de beleza e cultura. Se você busca relaxamento, diversão em família ou uma dose de adrenalina, nós temos o destino perfeito para você!
+          </p>
+          
+          <div class="dropdown" onclick="toggleDropdown()">
+            <div class="dropdown-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Ícone">
+                <div>
+                    <strong>Destinos</strong>
+                    <span>Para onde você deseja ir?</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-list">
+                <a href="#">Alto Paraíso de Goiás</a>
+                <a href="#">Armação dos Búzios</a>
+                <a href="#">Campos do Jordão</a>
+                <a href="#">Fortim</a>
+            </div>
+        </div>
+          
+        </div>
+
+        <div class="destinos">
+          <div class="destino grande" style="background-image: url('https://i.imgur.com/oXHLDZZ.jpeg');">Angra dos Reis</div>
+          <div class="destino" style="background-image: url('https://i.imgur.com/uqL8gPg.jpeg');">Alto Paraíso de Goiás</div>
+          <div class="destino" style="background-image: url('https://i.imgur.com/gcAcF4L.jpeg');">Campos do Jordão</div>
+          <div class="destino" style="background-image: url('https://i.imgur.com/4rYazXb.jpeg');">Capitólio</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    function toggleDropdown() {
+        document.querySelector(".dropdown").classList.toggle("open");
+    }
+</script>
+
+</body>
+</html>
+
