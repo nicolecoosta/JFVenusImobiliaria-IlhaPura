@@ -50,11 +50,11 @@ header span {
     align-items: start;
 }
   header h1 {
-    font-size: 8px;
+    font-size: 10px;
     
   }
 header span {
-  font-size: 8px;
+  font-size: 10px;
 text-align: right;
 }
 
@@ -651,4 +651,40 @@ text-align: right;
 .whatsapp-button-fix img {
   width: 24px;
   height: 24px;
+}
+.whatsapp-button-mobile{
+  display: none;
+}
+@media(max-width:768px){
+  .whatsapp-button-fix{
+    display: none;
+  }
+  .whatsapp-button-mobile {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    z-index: 2;
+  }
+  
+  .whatsapp-button-mobile:hover {
+    transform: scale(1.1);
+  }
+  
+  .whatsapp-button-mobile img {
+    width: 24px;
+    height: 24px;
+  }
+
 }
