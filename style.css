@@ -67,7 +67,7 @@ text-align: right;
 .section-content {
   display: flex;
   height: 80vh;
-  background-image: url('./img/ilha-pura.jpg');
+  background-image: url('../img-ilhapura/ilha-pura.jpg');
   background-size: cover;
   background-position: center;
   justify-content: center;
