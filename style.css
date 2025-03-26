@@ -627,8 +627,8 @@ text-align: right;
 /* WhatsApp */
 .whatsapp-button-fix {
   position: fixed;
-  bottom: 20px;
-  right: 5px;
+  bottom: 30px;
+  right: 15px;
   background-color: #25d366;
   color: #fff;
   padding: 12px 16px;
